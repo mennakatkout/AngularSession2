@@ -1,196 +1,285 @@
 <html>
-   <head>
-      <title>AngularJS First Application</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-   </head>
-   <body>
-      <h1>Sample Application</h1>
-      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<head>
+	<title>AngularJS First Application</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Sample Application</h1>
+	<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
-      <!--Example 1-->
-     <!--  <script src ="mainApp.js"></script>
-      <script src ="studentController.js"></script>
-      <div ng-app = "mainApp" ng-controller = "studentController">
-        <form name = "studentForm" novalidate>
-            <table border = "0">
-               <tr>
-                  <td>Enter first name:</td>
-                  <td><input name = "firstname" type = "text" ng-model = "firstName" required>
-                     <span style = "color:red" ng-show = "studentForm.firstname.$dirty && studentForm.firstname.$invalid">
-                        <span ng-show = "studentForm.firstname.$error.required">First Name is required.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>Enter last name: </td>
-                  <td><input name = "lastname"  type = "text" ng-model = "lastName" required>
-                     <span style = "color:red" ng-show = "studentForm.lastname.$dirty && studentForm.lastname.$invalid">
-                        <span ng-show = "studentForm.lastname.$error.required">Last Name is required.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>Email: </td><td><input name = "email" type = "email" ng-model = "email" length = "100" required>
-                     <span style = "color:red" ng-show = "studentForm.email.$dirty && studentForm.email.$invalid">
-                        <span ng-show = "studentForm.email.$error.required">Email is required.</span>
-                        <span ng-show = "studentForm.email.$error.email">Invalid email address.</span>
-                     </span>
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>
-                     <button ng-click = "reset()">Reset</button>
-                  </td>
-                  <td>
-                     <button ng-disabled = "studentForm.firstname.$dirty &&
-                        studentForm.firstname.$invalid || studentForm.lastname.$dirty &&
-                        studentForm.lastname.$invalid || studentForm.email.$dirty &&
-                        studentForm.email.$invalid" ng-click="submit()">Submit</button>
-                  </td>
-               </tr>
-					
-            </table>
-         </form> 
-      </div> -->
+	<!--Example 1-->
+  <script src ="mainApp.js"></script>
+  <script src ="studentController.js"></script>
+  <div ng-app = "mainApp" ng-controller = "studentController">
+    <form name = "studentForm" novalidate>
+        <table border = "0">
+           <tr>
+              <td>Enter first name:</td>
+              <td><input name = "firstname" type = "text" ng-model = "firstName" required>
+                 <span style = "color:red" ng-show = "studentForm.firstname.$dirty && studentForm.firstname.$invalid">
+                    <span ng-show = "studentForm.firstname.$error.required">First Name is required.</span>
+                 </span>
+              </td>
+           </tr>
+           
+           <tr>
+              <td>Enter last name: </td>
+              <td><input name = "lastname"  type = "text" ng-model = "lastName" required>
+                 <span style = "color:red" ng-show = "studentForm.lastname.$dirty && studentForm.lastname.$invalid">
+                    <span ng-show = "studentForm.lastname.$error.required">Last Name is required.</span>
+                 </span>
+              </td>
+           </tr>
+           
+           <tr>
+              <td>Email: </td><td><input name = "email" type = "email" ng-model = "email" length = "100" required>
+                 <span style = "color:red" ng-show = "studentForm.email.$dirty && studentForm.email.$invalid">
+                    <span ng-show = "studentForm.email.$error.required">Email is required.</span>
+                    <span ng-show = "studentForm.email.$error.email">Invalid email address.</span>
+                 </span>
+              </td>
+           </tr>
+           
+           <tr>
+              <td>
+                 <button ng-click = "reset()">Reset</button>
+              </td>
+              <td>
+                 <button ng-disabled = "studentForm.firstname.$dirty &&
+                    studentForm.firstname.$invalid || studentForm.lastname.$dirty &&
+                    studentForm.lastname.$invalid || studentForm.email.$dirty &&
+                    studentForm.email.$invalid" ng-click="submit()">Submit</button>
+              </td>
+           </tr>
+				
+        </table>
+     </form> 
+ </div>
 
-    <!-- Example 2-->
-     <!--  <div ng-app = "mainApp" ng-controller="studentController">
-         <div ng-include = "'include/main.html'"></div>
-         <div ng-include = "'include/subjects.html'"></div>
-      </div>
-      
-      <script>
-         var mainApp = angular.module("mainApp", []);
-         
-         mainApp.controller('studentController', function($scope) {
-            $scope.student = {
-               firstName: "Mahesh",
-               lastName: "Parashar",
-               fees:500,
-               
-               subjects:[
-                  {name:'Physics',marks:70},
-                  {name:'Chemistry',marks:80},
-                  {name:'Math',marks:65},
-                  {name:'English',marks:75},
-                  {name:'Hindi',marks:67}
-               ],
-               
-               fullName: function() {
-                  var studentObject;
-                  studentObject = $scope.student;
-                  return studentObject.firstName + " " + studentObject.lastName;
-               }
-            };
-         });
-      </script> -->
+ <!-- Example 2-->
+ <!--  <div ng-app = "mainApp" ng-controller="studentController">
+     <div ng-include = "'include/main.html'"></div>
+     <div ng-include = "'include/subjects.html'"></div>
+  </div>
+  
+  <script>
+     var mainApp = angular.module("mainApp", []);
+     
+     mainApp.controller('studentController', function($scope) {
+        $scope.student = {
+           firstName: "Mahesh",
+           lastName: "Parashar",
+           fees:500,
+           
+           subjects:[
+              {name:'Physics',marks:70},
+              {name:'Chemistry',marks:80},
+              {name:'Math',marks:65},
+              {name:'English',marks:75},
+              {name:'Hindi',marks:67}
+           ],
+           
+           fullName: function() {
+              var studentObject;
+              studentObject = $scope.student;
+              return studentObject.firstName + " " + studentObject.lastName;
+           }
+        };
+     });
+ </script> -->
 
-      <!-- Example 3 -->
-     <!--  <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
-      <div ng-app = "mainApp">
-         <p><a href = "#addStudent">Add Student</a></p>
-         <p><a href = "#viewStudents">View Students</a></p>
-         <div ng-view></div>
-         
-         <script type = "text/ng-template" id = "addStudent.htm">
-            <h2> Add Student </h2>
-            {{message}}
-         </script>
-         
-         <script type = "text/ng-template" id = "viewStudents.htm">
-            <h2> View Students </h2>
-            {{message}}
-         </script>
-      </div>
-      
-      <script>
-         var mainApp = angular.module("mainApp", ['ngRoute']);
-         mainApp.config(['$routeProvider', function($routeProvider) {
-            $routeProvider.
-            
-            when('/addStudent', {
-               templateUrl: 'addStudent.htm',
-               controller: 'AddStudentController'
-            }).
-            
-            when('/viewStudents', {
-               templateUrl: 'viewStudents.htm',
-               controller: 'ViewStudentsController'
-            }).
-            
-            otherwise({
-               redirectTo: '/addStudent'
-            });
-         }]);
-         
-         mainApp.controller('AddStudentController', function($scope) {
-            $scope.message = "This page will be used to display add student form";
-         });
-         
-         mainApp.controller('ViewStudentsController', function($scope) {
-            $scope.message = "This page will be used to display all the students";
-         });
-			
-      </script> -->
+ <!-- Example 3 -->
+ <!--  <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+  <div ng-app = "mainApp">
+     <p><a href = "#addStudent">Add Student</a></p>
+     <p><a href = "#viewStudents">View Students</a></p>
+     <div ng-view></div>
+     
+     <script type = "text/ng-template" id = "addStudent.htm">
+        <h2> Add Student </h2>
+        {{message}}
+     </script>
+     
+     <script type = "text/ng-template" id = "viewStudents.htm">
+        <h2> View Students </h2>
+        {{message}}
+     </script>
+  </div>
+  
+  <script>
+     var mainApp = angular.module("mainApp", ['ngRoute']);
+     mainApp.config(['$routeProvider', function($routeProvider) {
+        $routeProvider.
+        
+        when('/addStudent', {
+           templateUrl: 'addStudent.htm',
+           controller: 'AddStudentController'
+        }).
+        
+        when('/viewStudents', {
+           templateUrl: 'viewStudents.htm',
+           controller: 'ViewStudentsController'
+        }).
+        
+        otherwise({
+           redirectTo: '/addStudent'
+        });
+     }]);
+     
+     mainApp.controller('AddStudentController', function($scope) {
+        $scope.message = "This page will be used to display add student form";
+     });
+     
+     mainApp.controller('ViewStudentsController', function($scope) {
+        $scope.message = "This page will be used to display all the students";
+     });
+		
+ </script> -->
 
-      <!--Example 4 -->
-	  <!-- <div ng-app = "mainApp" ng-controller = "CalcController">
-        <p>Enter a number: <input type = "number" ng-model = "number" /></p>
-        <button ng-click = "square()">X<sup>2</sup></button>
-        <p>Result: {{result}}</p>
-      </div>
-      
-      <script>
-         var mainApp = angular.module("mainApp", []);
-         
-         mainApp.factory('MathService', function() {
-            var factory = {};
-            
-            factory.multiply = function(a, b) {
-               return a * b
-            }
-            return factory;
-         });
-         
-         mainApp.service('CalcService', function(MathService){
-            this.square = function(a) {
-               return MathService.multiply(a,a);
-            }
-         });
-         
-         mainApp.controller('CalcController', function($scope, CalcService) {
-            $scope.square = function() {
-               $scope.result = CalcService.square($scope.number);
-            }
-         });
-      </script> -->
-      
-      <!-- Example 5 -->
-      <!-- <div ng-app="myApp" ng-controller="myCtrl"> 
+ <!--Example 4 -->
+  <!-- <div ng-app = "mainApp" ng-controller = "CalcController">
+    <p>Enter a number: <input type = "number" ng-model = "number" /></p>
+    <button ng-click = "square()">X<sup>2</sup></button>
+    <p>Result: {{result}}</p>
+  </div>
+  
+  <script>
+     var mainApp = angular.module("mainApp", []);
+     
+     mainApp.factory('MathService', function() {
+        var factory = {};
+        
+        factory.multiply = function(a, b) {
+           return a * b
+        }
+        return factory;
+     });
+     
+     mainApp.service('CalcService', function(MathService){
+        this.square = function(a) {
+           return MathService.multiply(a,a);
+        }
+     });
+     
+     mainApp.controller('CalcController', function($scope, CalcService) {
+        $scope.square = function() {
+           $scope.result = CalcService.square($scope.number);
+        }
+     });
+ </script> -->
 
-		<p>Today's welcome message is:</p>
-		<h1>{{myWelcome}}</h1>
-		<p>{{status}}</p>
+ <!-- Example 5 -->
+  <!-- <div ng-app="myApp" ng-controller="myCtrl"> 
 
-	  </div>
+	<p>Today's welcome message is:</p>
+	<h1>{{myWelcome}}</h1>
+	<p>{{status}}</p>
 
-      <script>
-	      var app = angular.module('myApp', []);
-			app.controller('myCtrl', function($scope, $http) {
-			    $http.get("wrongfilename.htm")
-			    .then(function(response) {
-			        //First function handles success
-			        $scope.myWelcome = response.data;
-			        $scope.status = response.status;
-			    }, function(response) {
-			        //Second function handles error
-			        $scope.myWelcome = "Something went wrong";
-			        $scope.status = response.status;
-			    });
-			});
+  </div>
+
+  <script>
+      var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope, $http) {
+		    $http.get("wrongfilename.htm")
+		    .then(function(response) {
+		        //First function handles success
+		        $scope.myWelcome = response.data;
+		        $scope.status = response.status;
+		    }, function(response) {
+		        //Second function handles error
+		        $scope.myWelcome = "Something went wrong";
+		        $scope.status = response.status;
+		    });
+		});
 	</script> -->
-   </body>
+	<!-- Example 6 -->
+<!-- 		<div ng-app = "mainApp" ng-controller = "CalcController">
+     <p>Enter a number: <input type = "number" ng-model = "number" /></p>
+     <button ng-click = "square()">X<sup>2</sup></button>
+     <p>Result: {{result}}</p>
+</div>
+ 
+  <script>
+     var mainApp = angular.module("mainApp", []);
+     
+     mainApp.config(function($provide) {
+        $provide.provider('MathService', function() {
+           this.$get = function() {
+              var factory = {};
+              
+              factory.multiply = function(a, b) {
+                 return a * b;
+              }
+              return factory;
+           };
+        });
+     });
+	
+     mainApp.value("defaultInput", 5);
+     
+     mainApp.factory('MathService', function() {
+        var factory = {};
+        
+        factory.multiply = function(a, b) {
+           return a * b;
+        }
+        return factory;
+     });
+     
+     mainApp.service('CalcService', function(MathService){
+        this.square = function(a) {
+           return MathService.multiply(a,a);
+        }
+     });
+     
+     mainApp.controller('CalcController', function($scope, CalcService, defaultInput) {
+        $scope.number = defaultInput;
+        $scope.result = CalcService.square($scope.number);
+
+        $scope.square = function() {
+           $scope.result = CalcService.square($scope.number);
+        }
+     });
+ </script> -->
+ <!-- Example 7 -->
+<!--  <ul ng-app="myApp" ng-controller="namesCtrl">
+ 	<li ng-repeat="x in names">
+ 		{{x | myFormat}}
+ 	</li>
+ </ul>
+
+ <script>
+ 	var app = angular.module('myApp', []);
+ 	app.filter('myFormat', function() {
+ 		return function(x) {
+ 			var i, c, txt = "";
+ 			for (i = 0; i < x.length; i++) {
+ 				c = x[i];
+ 				if (i % 2 == 0) {
+ 					c = c.toUpperCase();
+ 				}
+ 				txt += c;
+ 			}
+ 			return txt;
+ 		};
+ 	});
+ 	app.controller('namesCtrl', function($scope) {
+ 		$scope.names = ['jani', 'Carl', 'Margareth', 'Hege', 'Joe', 'Gustav', 'Birgit', 'Mary', 'Kai'];
+ 	});
+ </script> -->
+ <!-- Example 8 -->
+ <div ng-app="myApp">
+ 	<custom-directive></custom-directive>
+ </div>
+
+ <script>
+ 	var app = angular.module("myApp", []);
+ 	app.directive("customDirective", function() {
+ 		return {
+ 			template : "<h1>Made by a directive!</h1>"
+ 		};
+ 	});
+ </script>
+
+</body>
 </html>
